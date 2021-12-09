@@ -57,15 +57,15 @@
                 //                                          '$mail','$sexo','$apaterno','$amaterno','$desc_carrera',
                 //                                          '$desc_grupo','$desc_nivel','Alumno')");
 
-$insertar =$mysqli->query("INSERT INTO `usuarios`(`Id_usuario`, `Nombre`, `Telefono`, `Matricula`, `Contrasena`, 
-                            `Correo`, `Sexo`, `Apellido_paterno`, `Apellido_materno`, `Carreras`, `Grado`, 
-                            `Nivel`, `Rol`, `Estatus_alumno`, `Crear`, `Visualizar`, `Cuestionario`, 
-                            `Activar`, `Cuestionario_1`, `Cuestionario_2`, `Cuestionario_3`, 
-                            `Cuestionario_4`, `Cuestionario_5`) VALUES ('','$nombre','$telefono','$matricula',
-                            '$contrasena','$mail','$sexo','$apaterno','$amaterno','$desc_carrera',
-                            '$desc_grupo','$desc_nivel','Alumno',0,0,0,0,0,0,0,0,0,0)");                             
+// $insertar =$mysqli->query("INSERT INTO `usuarios`(`Id_usuario`, `Nombre`, `Telefono`, `Matricula`, `Contrasena`, 
+//                             `Correo`, `Sexo`, `Apellido_paterno`, `Apellido_materno`, `Carreras`, `Grado`, 
+//                             `Nivel`, `Rol`, `Estatus_alumno`, `Crear`, `Visualizar`, `Cuestionario`, 
+//                             `Activar`, `Cuestionario_1`, `Cuestionario_2`, `Cuestionario_3`, 
+//                             `Cuestionario_4`, `Cuestionario_5`) VALUES ('','$nombre','$telefono','$matricula',
+//                             '$contrasena','$mail','$sexo','$apaterno','$amaterno','$desc_carrera',
+//                             '$desc_grupo','$desc_nivel','Alumno',0,0,0,0,0,0,0,0,0,0)");                             
 
-                if($insertar) {
+                // if($insertar) {
                   $queryusuario = mysqli_query($mysqli,"SELECT * FROM usuarios WHERE Matricula ='$correo'");
                   $nr = mysqli_fetch_array($queryusuario); 
                   $_SESSION['Cuestionario1'] = $nr['Cuestionario_1'];
@@ -75,9 +75,9 @@ $insertar =$mysqli->query("INSERT INTO `usuarios`(`Id_usuario`, `Nombre`, `Telef
                   $_SESSION['Cuestionario5'] = $nr['Cuestionario_5'];
                   $_SESSION['Id'] = $nr['Id_usuario'];
                   echo "<script>location.href='alumno.php'</script>";
-                } else {
-                  echo "<script> alert('No se pudo ingresar');window.location= 'index.html' </script>";
-                }
+                // } else {
+                //   echo "<script> alert('No se pudo ingresar pero si a web service');window.location= 'index.html' </script>";
+                // }
               } else {
 
                 $queryusuario = mysqli_query($mysqli,"SELECT * FROM usuarios WHERE Matricula ='$correo'");
