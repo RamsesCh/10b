@@ -112,7 +112,27 @@ $rasgo = $aabb;
         //     $total2;
         // }
 
-$insertar = $mysqli->query("INSERT INTO ansiedad VALUES('','$id','$p1','$p2','$p3','$p4','$p5','$p6','$p7','$p8','$p9',
+// $insertar = $mysqli->query("INSERT INTO ansiedad VALUES('','$id','$p1','$p2','$p3','$p4','$p5','$p6','$p7','$p8','$p9',
+//                                                         '$p10','$p11','$p12','$p13','$p14','$p15','$p16','$p17',
+//                                                         '$p18','$p19','$p20','$p21','$p22','$p23','$p24','$p25',
+//                                                         '$p26','$p27','$p28','$p29','$p30','$p31','$p32','$p33',
+//                                                         '$p34','$p35','$p36','$p37','$p38','$p39','$p40','$ab',
+//                                                         '$aabb','$estado','$rasgo','','$date')")
+
+
+$insertar = $mysqli->query("INSERT INTO `ansiedad`(`Id_ansiedad`, `Id_usuario`, `Pregunta_1`, `Pregunta_2`, 
+                                        `Pregunta_3`, `Pregunta_4`, `Pregunta_5`, `Pregunta_6`, `Pregunta_7`, 
+                                        `Pregunta_8`, `Pregunta_9`, `Pregunta_10`, `Pregunta_11`, `Pregunta_12`, 
+                                        `Pregunta_13`, `Pregunta_14`, `Pregunta_15`, `Pregunta_16`, 
+                                        `Pregunta_17`, `Pregunta_18`, `Pregunta_19`, `Pregunta_20`, 
+                                        `Pregunta_21`, `Pregunta_22`, `Pregunta_23`, `Pregunta_24`, 
+                                        `Pregunta_25`, `Pregunta_26`, `Pregunta_27`, `Pregunta_28`, 
+                                        `Pregunta_29`, `Pregunta_30`, `Pregunta_31`, `Pregunta_32`, 
+                                        `Pregunta_33`, `Pregunta_34`, `Pregunta_35`, `Pregunta_36`, 
+                                        `Pregunta_37`, `Pregunta_38`, `Pregunta_39`, `Pregunta_40`, 
+                                        `Escala_estado`, `Escala_rasgo`, `Estado`, `Rasgo`, `Nombre`, 
+                                        `Fecha`) 
+                                        VALUES('','$id','$p1','$p2','$p3','$p4','$p5','$p6','$p7','$p8','$p9',
                                                         '$p10','$p11','$p12','$p13','$p14','$p15','$p16','$p17',
                                                         '$p18','$p19','$p20','$p21','$p22','$p23','$p24','$p25',
                                                         '$p26','$p27','$p28','$p29','$p30','$p31','$p32','$p33',
