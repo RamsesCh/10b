@@ -16,7 +16,6 @@
     }
     $params = array('lsMatricula' => $correo,'lsPassword'  => $contraseña);
     $result = $client->call('Login', $params);
-    print_r($result);
    
     if ($result) {
       $data = $result['LoginResult']['diffgram'];
